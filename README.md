@@ -52,3 +52,14 @@ sail npm run dev
 text
 
 [起動するかチェック](http://localhost/)
+
+ディレクトリ名をjs→tsに変更する
+変更箇所
+/resources/jsで検索して/resources/tsに置換する
+.vite.config.tsに書き換えて以下を追記
+    resolve: {
+        alias: {
+            '@': '/resources/ts',
+        },
+    },
+→記載しないとインポートエラーになる
